@@ -139,7 +139,7 @@ func do(job string){
 func main(){
 	jobs := []string{"one", "two", "three"}
 	
-	errc := make(chan error)
+	errc := make(chan error, len(jobs))
 	for _, job := range jobs {
 		go func(job string){
 			errc <- do(job)	
