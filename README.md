@@ -24,6 +24,8 @@ if queryErr != nil {
 }
 //Some Code
 ```
+
+
 ## 2. Don't Repeat Yourself
 ```go
 // Bad:
@@ -44,6 +46,8 @@ func eventsHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, `{"text": "Events Registered"}`)
 }
 ```
+
+
 ```go
 // Good:
 http.HandleFunc("/event/", Jsonify(eventHandler))
@@ -94,3 +98,60 @@ func xmlHandler(w http.ResponseWriter, r *http.Request) {
 			</root>`)
 }
 ```
+
+
+## 3. Avoid Concurrency in your `not-main` functions
+```go
+// Not Good
+func doConcurrently(job string, err chan error){
+	go func(){
+		fmt.Println("doing job:", job)
+		time.Sleep(1 * time.Second)
+		err <- errors.New("Something Went Wrong") 
+	}
+}
+
+func main(){
+	jobs := []string{"one", "two", "three"}
+	
+	errc := make(chan error)
+	for _, job := range jobs {
+		doConcurrently(job, errc)	
+	}
+	
+	for _, job := range jobs {
+		if err:=<-errc; err!=nil{
+			fmt.Println()
+		}
+	}
+}
+
+```
+
+```go
+// Better
+func do(job string){
+	fmt.Println("doing job:", job)
+	time.Sleep(1 * time.Second)
+	return errors.New("Something Went Wrong") 
+}
+
+func main(){
+	jobs := []string{"one", "two", "three"}
+	
+	errc := make(chan error)
+	for _, job := range jobs {
+		go func(job string){
+			errc <- do(job)	
+		}(job)
+	}
+	
+	for _, job := range jobs {
+		if err:=<-errc; err!=nil{
+			fmt.Println()
+		}
+	}
+}
+
+```
+
