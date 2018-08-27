@@ -28,7 +28,7 @@ if queryErr != nil {
 ```go
 // Bad:
 http.HandleFunc("/event/", eventHandler)
-http.HandleFunc("/event/", eventsHandler)
+http.HandleFunc("/events/", eventsHandler)
 
 func eventHandler(w http.ResponseWriter, r *http.Request) {
 	// Write Header
