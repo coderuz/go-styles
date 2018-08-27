@@ -47,7 +47,7 @@ func eventsHandler(w http.ResponseWriter, r *http.Request) {
 ```go
 // Good:
 http.HandleFunc("/event/", Jsonify(eventHandler))
-http.HandleFunc("/event/", Jsonify(eventsHandler))
+http.HandleFunc("/events/", Jsonify(eventsHandler))
 
 // Reusable Func, like Decorators in Python
 func Jsonify(f func(http.ResponseWriter, *http.Request)) http.HandlerFunc {
