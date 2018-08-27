@@ -1,6 +1,15 @@
 # go-styles
 Our Best Practises for writing beautiful and clean code in Go
 
+## 0. Simple is better than complex
+ - Seperate code into packages if exceeds the lines limit.
+ - Name your variables and functions intuitive.
+ - Don't format strings with + operator, use fmt.Fprintf for different varibles
+ - Comment on 'hacks' you wrote, that are not self explanatory.
+ 
+```go
+```
+
 ## 1. Flat is better than nested
 ```go
 // Bad:
