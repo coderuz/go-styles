@@ -11,7 +11,8 @@ if dbErr == nil {
 		// Some Code
 	}
 }
-
+```
+```go
 // Good
 var bd, err = sql.Open("postgres", "user=USER password=PASSWORD")
 if dbErr != nil {
@@ -22,4 +23,43 @@ if queryErr != nil {
 	// Handle error  
 }
 //Some Code
+```
+## 2. Don't Repeat Yourself
+```go
+// Bad:
+http.HandleFunc("/event/", eventHandler)
+http.HandleFunc("/event/", eventsHandler)
+
+func eventHandler(w http.ResponseWriter, r *http.Request) {
+	// Write Header
+	w.Header().Set("Content-Type", "application/json")
+	fmt.Fprintf(w, `{"text": "Event Registered"}`)
+}
+
+func eventsHandler(w http.ResponseWriter, r *http.Request) {
+	// Write Header
+	w.Header().Set("Content-Type", "application/json")
+	fmt.Fprintf(w, `{"text": "Events Registered"}`)
+}
+```
+```go
+// Better
+http.HandleFunc("/event/", Jsonify(eventHandler))
+http.HandleFunc("/event/", Jsonify(eventsHandler))
+
+// Reusable Func, like Decorators in Python
+func Jsonify(f func(http.ResponseWriter, *http.Request)) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		f(w, r)
+	}
+}
+
+func eventHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, `{"success": 1, "success_text": "Registered"}`)
+}
+
+func eventsHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, `{"success": 1, "success_text": "Registered"}`)
+}
 ```
