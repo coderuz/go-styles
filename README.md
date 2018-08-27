@@ -1,5 +1,5 @@
 # go-styles
-Our Best Practises for writing beautiful code in Go
+Our Best Practises for writing beautiful and clean code in Go
 
 ## 1. Flat is better than nested
 ```go
@@ -65,5 +65,32 @@ func eventHandler(w http.ResponseWriter, r *http.Request) {
 func eventsHandler(w http.ResponseWriter, r *http.Request) {
 	// Some Code
 	fmt.Fprintf(w, `{"success": 1, "success_text": "Registered"}`)
+}
+```
+
+```go 
+// or Even Better
+http.HandleFunc("/event/json/", ContentType("application/json", jsonHandler))
+http.HandleFunc("/event/xml/", ContentType("application/xml", xmlHandler))
+
+func ContentType(ct string, f func(http.ResponseWriter, *http.Request)) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", ct)
+		f(w, r)
+	}
+}
+
+func jsonHandler(w http.ResponseWriter, r *http.Request) {
+	// Some Code
+	fmt.Fprintf(w, `{"success": 1, "success_text": "Registered"}`)
+}
+
+func xmlHandler(w http.ResponseWriter, r *http.Request) {
+	// Some Code
+	fmt.Fprintf(w, `<?xml version="1.0" encoding="UTF-8"?>
+			<root>
+			   <success>1</success>
+			   <success_text>Registered</success_text>
+			</root>`)
 }
 ```
