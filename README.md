@@ -119,7 +119,7 @@ func main(){
 		doConcurrently(job, errc)	
 	}
 	
-	for _, job := range jobs {
+	for range jobs {
 		if err:=<-errc; err!=nil{
 			fmt.Println()
 		}
@@ -146,7 +146,7 @@ func main(){
 		}(job)
 	}
 	
-	for _, job := range jobs {
+	for range jobs {
 		if err:=<-errc; err!=nil{
 			fmt.Println()
 		}
