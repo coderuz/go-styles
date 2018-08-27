@@ -13,7 +13,7 @@ if dbErr == nil {
 }
 ```
 ```go
-// Good
+// Good:
 var bd, err = sql.Open("postgres", "user=USER password=PASSWORD")
 if dbErr != nil {
 	// Handle error
@@ -33,17 +33,19 @@ http.HandleFunc("/events/", eventsHandler)
 func eventHandler(w http.ResponseWriter, r *http.Request) {
 	// Write Header
 	w.Header().Set("Content-Type", "application/json")
+	// Some Code
 	fmt.Fprintf(w, `{"text": "Event Registered"}`)
 }
 
 func eventsHandler(w http.ResponseWriter, r *http.Request) {
 	// Write Header
 	w.Header().Set("Content-Type", "application/json")
+	// Some Code
 	fmt.Fprintf(w, `{"text": "Events Registered"}`)
 }
 ```
 ```go
-// Better
+// Good:
 http.HandleFunc("/event/", Jsonify(eventHandler))
 http.HandleFunc("/event/", Jsonify(eventsHandler))
 
@@ -56,10 +58,12 @@ func Jsonify(f func(http.ResponseWriter, *http.Request)) http.HandlerFunc {
 }
 
 func eventHandler(w http.ResponseWriter, r *http.Request) {
+	// Some Code
 	fmt.Fprintf(w, `{"success": 1, "success_text": "Registered"}`)
 }
 
 func eventsHandler(w http.ResponseWriter, r *http.Request) {
+	// Some Code
 	fmt.Fprintf(w, `{"success": 1, "success_text": "Registered"}`)
 }
 ```
