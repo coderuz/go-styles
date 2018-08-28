@@ -4,8 +4,8 @@ Our Best Practises for writing beautiful and clean code in Go
 ## 0. Simple is better than complex
 
  - Name your variables and functions intuitive.
- 	- though you can use i for index, v for value
-	- don't use snake case, ```python i_love_python = true```
+ 	- though you can use ```i``` for index, ```v``` for value
+	- don't use snake case, ```i_love_python = true```
  - Don't format strings with + operator, use fmt.Fprintf for different varibles
  	- it resolves the type issues as well
  - Comment on 'hacks' you wrote, that are not self explanatory.
@@ -163,5 +163,6 @@ func main(){
 	}
 }
 
+```go
+// To be continued
 ```
-
