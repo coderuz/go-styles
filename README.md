@@ -4,9 +4,11 @@ Our Best Practises for writing beautiful and clean code in Go
 ## 0. Simple is better than complex
 
  - Name your variables and functions intuitive.
+ 	- though you can use i for index, v for value
  - Don't format strings with + operator, use fmt.Fprintf for different varibles
+ 	- it resolves the type issues as well
  - Comment on 'hacks' you wrote, that are not self explanatory.
- 
+ 	- Don't say if it was hard to write, it should be hard to read
 
 ## 1. Flat is better than nested
 ```go
