@@ -66,8 +66,13 @@ Our Best Practises for writing beautiful and clean code in Go
  
    ### 0.1.5 Naming Packages
   ```go
-  
-  
+  `it's bad practice to name packages utils, helpers, ...`
+  `Use descriptive names and keep them short`
+  `standard library packages are the best example`
+  // such as one word describes all
+  import "archive"
+  // I can intuitively guess there are zip, tar and more compressors and uncompressors
+  // it was not named "tar.zip.things"  
  ```
  
  ## 0.2 Code Structure
