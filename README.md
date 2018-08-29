@@ -64,7 +64,27 @@ Our Best Practises for writing beautiful and clean code in Go
  
  ## 0.8 Indenting, Encoding, Spaces vs Tabs
  
- 
+  ### 0.8.1 Indenting
+  Always indent code for better readablity, Preferably with 2 space indent level. We recommend goformat extenttion for visual studio code which formats your code when you save the file.
+ ```go 
+ // Bad:
+ w = Wheel{Circle{Point{8, 8}, 5}, 20}
+ ```
+ with visual indent code is much more readible
+ ```go
+ // Better
+ w = Wheel{
+    Circle: Circle{
+       Point: Point{X: 8, Y: 8},
+       Radius: 5,
+    },
+    Spokes: 20,
+ }
+ ```
+ ### 0.8.2 Encoding
+  UTF-8
+ ### Spaces vs Tabs
+  [https://www.youtube.com/watch?v=SsoOG6ZeyUI]{Tabs versus Spaces - YouTube}
  
  ## 0.9 IDE vs Editor
   - Statistics of our usage:
