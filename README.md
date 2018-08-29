@@ -41,9 +41,9 @@ Our Best Practises for writing beautiful and clean code in Go
   }
   
   priceList := map[string]float{
-  	"notebook": 15.0,
-	"pen": 24.99,
-	"bag": 149.99, 
+    "notebook": 15.0,
+    "pen": 24.99,
+    "bag": 149.99, 
   }
   
   // And arrays and slices - plural
@@ -53,8 +53,15 @@ Our Best Practises for writing beautiful and clean code in Go
  
    ### 0.1.4 Naming Errors
  ```go
- 
- 
+  // Don't use the same variable - err for every error
+  // Here is the standard we use
+  ErrReadFail := errors.New("could not read file")
+  
+  // and
+  ErrFileExists := errors.New("File Already Exists")
+  
+  // but not
+  FileExistsError := errors.New("File Already Exists")
  ```
  
    ### 0.1.5 Naming Packages
