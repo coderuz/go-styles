@@ -2,11 +2,17 @@
 Our Best Practises for writing beautiful and clean code in Go
 
  ## 0.1 Naming Conventions
- 
-   ### 0.1.1 Naming Variables
+
+   ### 0.1.1 Naming Variables, CamelCase/camelCase, not snake_case
  ```go
- 
- 
+ // Make sure you name variables with Nouns and with its role in code
+ CountrCode := "UZ"
+ inserts := 0
+ score := 50.0
+ // Booleans with adjectives
+ alive := true
+ // or
+ isSent := false
  ```
  
    ### 0.1.2 Naming Functions and Methods
