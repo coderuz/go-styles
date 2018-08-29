@@ -7,7 +7,6 @@ Our Best Practises for writing beautiful and clean code in Go
  ```go
  // Make sure you name variables with Nouns and with its role in code
  CountrCode := "UZ"
- inserts := 0
  score := 50.0
  // Booleans with adjectives
  alive := true
@@ -15,10 +14,17 @@ Our Best Practises for writing beautiful and clean code in Go
  isSent := false
  ```
  
-   ### 0.1.2 Naming Functions and Methods
+   ### 0.1.2 Naming Functions
   ```go
-  
-  
+  // The same for functions, use CamelCase/camelCase
+  // name them with verbs
+  func increaseInt(i int) int {
+    return i++
+  }
+  // keep them short  and descriptive, unlike
+  func increaseNumberByOneAndThisIsLongName(){
+    
+  }
  ```
  
    ### 0.1.3 Naming Structs, Maps, Arrays
