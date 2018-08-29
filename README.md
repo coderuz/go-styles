@@ -1,8 +1,6 @@
 # go-styles
 Our Best Practises for writing beautiful and clean code in Go
 
-## 0. Internal Rules
-
  ## 0.1 Naming Conventions
  
  ### 0.1.1 Naming Variables
@@ -40,8 +38,6 @@ Our Best Practises for writing beautiful and clean code in Go
   ```go
   
  ```
- ### 
- 
 
 ## 1. Flat is better than nested
 ```go
