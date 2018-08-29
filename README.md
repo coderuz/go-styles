@@ -8,17 +8,26 @@ Our Best Practises for writing beautiful and clean code in Go
  
  
  ```
+ 
  ### 0.1.2 Naming Functions and Methods
   ```go
   
   
  ```
+ 
  ### 0.1.3 Naming Structs, Maps, Arrays
   ```go
   
   
  ```
- ### 0.1.4 Naming Packages
+ 
+ ### 0.1.4 Naming Errors
+ ```go
+ 
+ 
+ ```
+ 
+ ### 0.1.5 Naming Packages
   ```go
   
   
@@ -28,16 +37,32 @@ Our Best Practises for writing beautiful and clean code in Go
  
  ### 0.2.1 Orders of imports
   ```go
+  
+  
  ```
+ 
  ### 0.2.2 Structuring of main package
   ```go
   
   
  ```
- ### 0.2.3 Structuring importable packages
+ ### 0.2.3 Structuring reusable packages
   ```go
   
+  
  ```
+ 
+ ## 0.3 Documenting Code
+ 
+ ## 0.4 Methods vs Functions
+ 
+ ## 0.5 Go Routines
+ 
+ ## 0.6 Performance vs Readability
+ 
+ ## 0.7 Testing
+
+
 
 ## 1. Flat is better than nested
 ```go
