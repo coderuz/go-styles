@@ -3,31 +3,31 @@ Our Best Practises for writing beautiful and clean code in Go
 
  ## 0.1 Naming Conventions
  
- ### 0.1.1 Naming Variables
+   ### 0.1.1 Naming Variables
  ```go
  
  
  ```
  
- ### 0.1.2 Naming Functions and Methods
+   ### 0.1.2 Naming Functions and Methods
   ```go
   
   
  ```
  
- ### 0.1.3 Naming Structs, Maps, Arrays
+   ### 0.1.3 Naming Structs, Maps, Arrays
   ```go
   
   
  ```
  
- ### 0.1.4 Naming Errors
+   ### 0.1.4 Naming Errors
  ```go
  
  
  ```
  
- ### 0.1.5 Naming Packages
+   ### 0.1.5 Naming Packages
   ```go
   
   
@@ -35,18 +35,18 @@ Our Best Practises for writing beautiful and clean code in Go
  
  ## 0.2 Code Structure
  
- ### 0.2.1 Orders of imports
+   ### 0.2.1 Orders of imports
   ```go
   
   
  ```
  
- ### 0.2.2 Structuring of main package
+   ### 0.2.2 Structuring of main package
   ```go
   
   
  ```
- ### 0.2.3 Structuring reusable packages
+   ### 0.2.3 Structuring reusable packages
   ```go
   
   
@@ -63,6 +63,7 @@ Our Best Practises for writing beautiful and clean code in Go
  ## 0.7 Testing
  
  ## 0.8 Indenting, Encoding, Spaces vs Tabs
+ 
  
  
  ## 0.9 IDE vs Editor
