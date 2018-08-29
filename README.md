@@ -1,15 +1,47 @@
 # go-styles
 Our Best Practises for writing beautiful and clean code in Go
 
-## 0. Simple is better than complex
+## 0. Internal Rules
 
- - Name your variables and functions intuitive.
- 	- though you can use ```i``` for index, ```v``` for value
-	- don't use snake case, ```i_love_python = true```
- - Don't format strings with + operator, use fmt.Fprintf for different varibles
- 	- it resolves the type issues as well
- - Comment on 'hacks' you wrote, that are not self explanatory.
- 	- Don't say if it was hard to write, it should be hard to read
+ ## 0.1 Naming Conventions
+ 
+ ### 0.1.1 Naming Variables
+ ```go
+ 
+ 
+ ```
+ ### 0.1.2 Naming Functions and Methods
+  ```go
+  
+  
+ ```
+ ### 0.1.3 Naming Structs, Maps, Arrays
+  ```go
+  
+  
+ ```
+ ### 0.1.4 Naming Packages
+  ```go
+  
+  
+ ```
+ 
+ ## 0.2 Code Structure
+ 
+ ### 0.2.1 Orders of imports
+  ```go
+ ```
+ ### 0.2.2 Structuring of main package
+  ```go
+  
+  
+ ```
+ ### 0.2.3 Structuring importable packages
+  ```go
+  
+ ```
+ ### 
+ 
 
 ## 1. Flat is better than nested
 ```go
