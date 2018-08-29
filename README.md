@@ -94,9 +94,32 @@ Our Best Practises for writing beautiful and clean code in Go
  
    ### 0.2.2 Structuring of main package
   ```go
+  // it's bad idea to declare variables outside the main function,
+  // though you may define constants outside.
   
+  import "net/http"
+  
+  const (
+    API_ROOT = "https://example.com/api"
+    STATUS_OK = 200
+    ...
+  )
+  
+  func main(){
+    answer := otherFunc()
+    ...
+  }
+  
+  func otherFunc() int {
+    return 42
+  }
+  
+  func anotherFunc(){
+    // some code
+  }
   
  ```
+ 
    ### 0.2.3 Structuring reusable packages
   ```go
   
