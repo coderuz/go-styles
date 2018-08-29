@@ -79,16 +79,20 @@ Our Best Practises for writing beautiful and clean code in Go
  
    ### 0.2.1 Ordering imports
   ```go
+  // Group them the following order:
   // first standard packages
   // then external packages
   // then project internal packages
-  import "fmt"
-  import "net/http"
+  import (
+    "fmt"
+    "net/http"
   
-  import "github.com/gorilla/mux"
+    "github.com/gorilla/mux"
   
-  import "./handlers"
-  // Order groups alphabetically
+    "./handlers"
+  )
+  
+  // Order group alphabetically
   // There are many extentions that take care of it
  ```
  
@@ -120,10 +124,11 @@ Our Best Practises for writing beautiful and clean code in Go
   
  ```
  
-   ### 0.2.3 Structuring reusable packages
+   ### 0.2.3 Structuring packages
   ```go
-  
-  
+  `Seperate package into logical parts and store them in different files`
+  `Each having the same package name`
+  // I will continue from here next time
  ```
  
  ## 0.3 Documenting Code
