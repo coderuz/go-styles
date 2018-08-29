@@ -5,11 +5,13 @@ Our Best Practises for writing beautiful and clean code in Go
 
    ### 0.1.1 Naming Variables, CamelCase/camelCase, not snake_case
  ```go
- // Make sure you name variables with Nouns and with its role in code
+ // Make sure you name variables with Nouns and with its role
  CountrCode := "UZ"
  score := 50.0
+ 
  // Booleans with adjectives
  alive := true
+ 
  // or
  isSent := false
  ```
@@ -21,16 +23,32 @@ Our Best Practises for writing beautiful and clean code in Go
   func increaseInt(i int) int {
     return i++
   }
+  
+  
   // keep them short  and descriptive, unlike
   func increaseNumberByOneAndThisIsLongName(){
-    
+    // Don't forget indenting
   }
  ```
  
    ### 0.1.3 Naming Structs, Maps, Arrays
   ```go
+  // for Structs and Maps it's handy to use sigular nouns
   
+  type Person struct {
+    name string
+    age int
+  }
   
+  priceList := map[string]float{
+  	"notebook": 15.0,
+	"pen": 24.99,
+	"bag": 149.99, 
+  }
+  
+  // And arrays and slices - plural
+  people := [5]Person{}
+  odds := []int{1,3,5,7,9}
  ```
  
    ### 0.1.4 Naming Errors
