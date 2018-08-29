@@ -62,7 +62,14 @@ Our Best Practises for writing beautiful and clean code in Go
  
  ## 0.7 Testing
  
- ## 0.8 Indenting, Spaces vs Tabs
+ ## 0.8 Indenting, Encoding, Spaces vs Tabs
+ 
+ 
+ ## 0.9 IDE vs Editor
+  - Statistics of our usage:
+	 50% - Visual Studio Code
+	 25% - Sublime Text
+	 25% - GoLand by JetBrains
  
 
 
