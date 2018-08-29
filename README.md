@@ -67,9 +67,9 @@ Our Best Practises for writing beautiful and clean code in Go
  
  ## 0.9 IDE vs Editor
   - Statistics of our usage:
-	 50% - Visual Studio Code
-	 25% - Sublime Text
-	 25% - GoLand by JetBrains
+    1. 50% - Visual Studio Code
+    2. 25% - Sublime Text
+    3. 25% - GoLand by JetBrains
  
 
 
