@@ -84,8 +84,7 @@ Our Best Practises for writing beautiful and clean code in Go
  ### 0.8.2 Encoding
   UTF-8
  ### Spaces vs Tabs
- It's not python. It's go.
- [![Tabs versus Spaces - YouTube](https://img.youtube.com/vi/SsoOG6ZeyUI/0.jpg)](https://www.youtube.com/watch?v=SsoOG6ZeyUI) 
+ [![Tabs versus Spaces - YouTube](https://img.youtube.com/vi/V7PLxL8jIl8/0.jpg)](https://www.youtube.com/watch?v=V7PLxL8jIl8) 
  
  ## 0.9 IDE vs Editor
   - Statistics of our usage:
