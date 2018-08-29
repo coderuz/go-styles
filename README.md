@@ -75,12 +75,21 @@ Our Best Practises for writing beautiful and clean code in Go
   // it was not named "tar.zip.things"  
  ```
  
- ## 0.2 Code Structure
+ ## 0.2 Project Structure
  
-   ### 0.2.1 Orders of imports
+   ### 0.2.1 Ordering imports
   ```go
+  // first standard packages
+  // then external packages
+  // then project internal packages
+  import "fmt"
+  import "net/http"
   
+  import "github.com/gorilla/mux"
   
+  import "./handlers"
+  // Order groups alphabetically
+  // There are many extentions that take care of it
  ```
  
    ### 0.2.2 Structuring of main package
