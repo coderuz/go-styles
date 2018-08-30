@@ -146,7 +146,18 @@ Our Best Practises for writing beautiful and clean code in Go
  > Everyday we read more code than we write
  > First document of you code is itself, so again please write elegant code
  ```go
- // at NewMax we use standard testing package: 'testing'
+ `package should contain doc.go file`
+ `it will not participate in binary executable`
+ // This is where you should write extended documentation of your source code
+ ```
+ 
+ ## 0.4 Go Routines
+ 
+ ## 0.5 Performance vs Readability
+ 
+ ## 0.6 Testing
+  ```go
+ `at NewMax we use: 'testing' and "github.com/stretchr/testify/assert"`
  // one more thing to mention: don't write tests like this:
  ```
  ```go
@@ -161,6 +172,7 @@ Our Best Practises for writing beautiful and clean code in Go
 
 ```go
 // Better
+ // write table driven tests, it's easier to add more tests and best practice.
 func TestAdd(t *testing.T) {
 	cases := []struct {
 		A, B, Expected int
@@ -179,19 +191,10 @@ func TestAdd(t *testing.T) {
 	}
 }
 ```
-
  
- ## 0.4 Methods vs Functions
+ ## 0.7 Indenting, Encoding, Spaces vs Tabs
  
- ## 0.5 Go Routines
- 
- ## 0.6 Performance vs Readability
- 
- ## 0.7 Testing
- 
- ## 0.8 Indenting, Encoding, Spaces vs Tabs
- 
-  ### 0.8.1 Indenting
+  ### 0.7.1 Indenting
   Always indent code for better readablity, Preferably with 2 space indent level. We recommend goformat extenttion for visual studio code which formats your code when you save the file.
  ```go 
  // Bad:
@@ -208,7 +211,7 @@ func TestAdd(t *testing.T) {
     Spokes: 20,
  }
  ```
- ### 0.8.2 Encoding
+ ### 0.7.2 Encoding
   UTF-8
  ### Spaces vs Tabs
  [![Tabs versus Spaces - YouTube](https://img.youtube.com/vi/V7PLxL8jIl8/0.jpg)](https://www.youtube.com/watch?v=V7PLxL8jIl8) 
