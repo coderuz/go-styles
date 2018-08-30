@@ -151,11 +151,15 @@ Our Best Practises for writing beautiful and clean code in Go
  // This is where you should write extended documentation of your source code
  ```
  
- ## 0.4 Go Routines
+ ## 0.4 Performance vs Readability
+ > Many people ask me which one is more important
  
- ## 0.5 Performance vs Readability
+ > My answer is both. You can still write performant code with high readality
+ > If you are doing some 'hacks', then explain why it works with comments
+ > One thing I am sure:
+ >	Unreadable code can bring more problems than non-performat one.
  
- ## 0.6 Testing
+ ## 0.5 Testing
   ```go
  `at NewMax we use: 'testing' and "github.com/stretchr/testify/assert"`
  // one more thing to mention: don't write tests like this:
@@ -192,9 +196,9 @@ func TestAdd(t *testing.T) {
 }
 ```
  
- ## 0.7 Indenting, Encoding, Spaces vs Tabs
+ ## 0.6 Indenting, Encoding, Spaces vs Tabs
  
-  ### 0.7.1 Indenting
+  ### 0.6.1 Indenting
   Always indent code for better readablity, Preferably with 2 space indent level. We recommend goformat extenttion for visual studio code which formats your code when you save the file.
  ```go 
  // Bad:
@@ -211,10 +215,12 @@ func TestAdd(t *testing.T) {
     Spokes: 20,
  }
  ```
- ### 0.7.2 Encoding
+ ### 0.6.2 Encoding
   UTF-8
- ### Spaces vs Tabs
+  
+ ### 0.6.3 Spaces vs Tabs
  [![Tabs versus Spaces - YouTube](https://img.youtube.com/vi/V7PLxL8jIl8/0.jpg)](https://www.youtube.com/watch?v=V7PLxL8jIl8) 
+ 
  
  ## 0.9 IDE vs Editor
   - Statistics of our usage:
@@ -378,7 +384,9 @@ func main(){
 }
 ```
 
-## Then ...
+## These are subject to change. Know a better way? Tell us!
 ```go
-// To be continued
+// It's our conventions
+// You make your own
+// Most important thing is team can communicate efficiently.
 ```
