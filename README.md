@@ -142,6 +142,44 @@ Our Best Practises for writing beautiful and clean code in Go
    
    
  ## 0.3 Documenting Code
+ > Documenting is essential
+ > Everyday we read more code than we write
+ > First document of you code is itself, so again please write elegant code
+ ```go
+ // at NewMax we use standard testing package: 'testing'
+ // one more thing to mention: don't write tests like this:
+ ```
+ ```go
+ // Bad
+ func TestAdd(t *testing.T) {
+	assert.Equal(t, 1+1, 2)
+	assert.Equal(t, 1+-1, 0)
+	assert.Equal(t, 1, 0, 1)
+	assert.Equal(t, 0, 0, 0)
+}
+```
+
+```go
+// Better
+func TestAdd(t *testing.T) {
+	cases := []struct {
+		A, B, Expected int
+	}{
+		{1, 1, 2},
+		{1, -1, 0},
+		{1, 0, 1},
+		{0, 0, 0},
+	}
+
+	for _, tc := range cases {
+		t.Run(fmt.Sprintf("%d + %d", tc.A, tc.B), func(t *testing.T) {
+			t.Parallel()
+			assert.Equal(t, t.Expected, tc.A+tc.B)
+		})
+	}
+}
+```
+
  
  ## 0.4 Methods vs Functions
  
