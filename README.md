@@ -129,10 +129,18 @@ Our Best Practises for writing beautiful and clean code in Go
   `Seperate package into logical parts and store them in different files`
   `Each having the same package name`
   `it will keep files smaller and neat`
-  // Here is a classic example from standard packages
+  // Here is a classic example from standard packages: 'fmt' package
  ```
  ![package example](https://raw.githubusercontent.com/coderuz/go-styles/master/package_example.png "fmt module")
-
+  
+  ```go
+  `Sometimes codebase gets even larger and you can't keep them in one package`
+  `What you can do is gather all packages under one namespace by keeping packages in folder`
+  // Here is another classic example: 'encoding'
+  ```
+   ![package example](https://raw.githubusercontent.com/coderuz/go-styles/master/packages.png "encoding module")
+   
+   
  ## 0.3 Documenting Code
  
  ## 0.4 Methods vs Functions
