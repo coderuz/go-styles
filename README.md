@@ -131,7 +131,7 @@ Our Best Practises for writing beautiful and clean code in Go
   `it will keep files smaller and neat`
   // Here is a classic example from standard packages
  ```
- ![package example](https://github.com/coderuz/go-styles/master/package_example.png "fmt module")
+ ![package example](https://raw.githubusercontent.com/coderuz/go-styles/master/package_example.png "fmt module")
 
  ## 0.3 Documenting Code
  
