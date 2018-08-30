@@ -6,7 +6,7 @@ Our Best Practises for writing beautiful and clean code in Go
    ### 0.1.1 Naming Variables, CamelCase/camelCase, not snake_case
  ```go
  // Make sure you name variables with Nouns and with its role
- CountrCode := "UZ"
+ CountryCode := "UZ"
  score := 50.0
  
  // Booleans with adjectives
@@ -128,9 +128,11 @@ Our Best Practises for writing beautiful and clean code in Go
   ```go
   `Seperate package into logical parts and store them in different files`
   `Each having the same package name`
-  // I will continue from here next time
+  `it will keep files smaller and neat`
+  // Here is a classic example from standard packages
  ```
- 
+ ![package example](https://github.com/coderuz/package_example.png "fmt module")
+
  ## 0.3 Documenting Code
  
  ## 0.4 Methods vs Functions
